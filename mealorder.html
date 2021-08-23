@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    
+
+    <title>Order Meal</title>
+    <style>
+        .navbar{
+      position: fixed;
+      width: 100%;
+      background: #fff !important;
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.25);
+      transition: .6s;
+      z-index: 10;
+    }
+
+    
+
+    .navbar-nav{
+      font-family: 'Jost', sans-serif;
+      font-weight: bold;
+    }
+
+    .nav-link{
+      margin-right: 5px;
+    }
+
+    .nav-link:hover{
+      color: rgb(250, 9, 29) !important;
+    }
+
+    nav.sticky{
+      background-color: #fff !important;
+      margin-right: 5px;
+    }
+
+    @media (max-width:768px){
+
+      .navbar{
+        z-index: 10;
+      }
+
+      .navbar-brand .logo-one{
+        margin-left: 5px !important;
+        height: 40px;
+      }
+
+      .icons{
+        margin-bottom: 1rem;
+      }
+
+    }
+
+      /* footer section */
+      footer{
+        background: #000;
+        color: #fff;
+        font-family: 'josefin sans';
+      }
+      .logo2{
+        height:50px; 
+        margin:30px 20px 5px;
+      }
+
+      .content1{
+        margin:20px;
+        font-size: 16px;
+        line-height: 25px;
+        color: #fff;
+        
+      }
+
+      .content2{
+        margin-top: 50px;
+        margin-left: 30px;
+        font-weight: bold;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        display: inline-block;
+        font-family: 'jost';
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .icons{
+        margin-left: 14%;
+        margin-top: 4%;
+      }
+
+      .icons .icon-link{
+        color: #fff;
+        margin-right: 10px;
+      }
+
+      .content3{
+        font-size: 15px;
+      }
+
+      .footer2{
+        background: #333;
+        color: grey;
+        padding: 3px;
+        text-align: center;
+        font-family: 'josefin sans';
+      }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  color: #272727;
+  font-family: 'montserrat';
+  
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #fc0228 40%, #c809f8 100%);
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+
+    </style>
+  </head>
+  <body style="background-color: rgb(253, 250, 250);">
+
+   
+     <br><br>
+    <div class="main">
+        <h1 style="color: rgb(3, 0, 0);">Delicious Non Veg/ Veg</h1>
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s1.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Chicken Karahi</h2>
+                <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 120/plate</p>
+                <a href="#">
+                <button class="btn card_btn">Buy Here</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s3.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Chicken Hydrabadi</h2>
+                <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 120/plate</p>
+                <a href="#">
+                <button class="btn card_btn">Buy  Here</button>
+              </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s5.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Chicken Butter Masala</h2>
+                <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 120/plate</p>
+                <a href="#">
+                <button class="btn card_btn">Buy Here</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s2.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Paneer Butter Masala</h2>
+                <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 140/plate</p>
+                <a href="#">
+                <button class="btn card_btn">Buy Here</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s11.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Mushroom masala</h2>
+                <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 140/plate</p>
+                <a href="#">
+                <button class="btn card_btn">Buy Here</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s4.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Chicken Tandoori</h2>
+                <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 120/plate</p>
+                <a href="#">
+                <button class="btn card_btn">Buy now</button>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="main">
+        
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s16.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Mutton Korma</h2>
+                <p class="card_text">&nbsp;&nbsp;&nbsp;  Price:Rs 140/plate</p>
+                <a href="#">
+                <button class="btn card_btn">Buy Here</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s17.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Achari Chicken</h2>
+                <p class="card_text">   &nbsp;&nbsp;&nbsp;  Price:Rs 160/plate</p>
+                <a href="">
+                <button class="btn card_btn">Buy  Here</button>
+              </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s18.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Chicken Biryani</h2>
+                <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 120/plate</p>
+                <a href="#">
+                <button class="btn card_btn">Buy Here</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s19.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Veg Biryani</h2>
+                <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 140/plate</p>
+                <a href="">
+                <button class="btn card_btn">Buy Here</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s20.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Aloo Ghobi</h2>
+                <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 140/plate</p>
+                <a href="#">
+                <button class="btn card_btn">Buy Now</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s21.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Kadahi Paneer</h2>
+                <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 120/plate</p>
+                <a href="#">
+                <button class="btn card_btn">Buy now</button>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="main">
+        <h1 style="color: rgb(3, 0, 0);">Snacks</h1>
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s22.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Samosa</h2>
+                <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 20/piece</p>
+                <a href="#">
+                <button class="btn card_btn">Buy Here</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s23.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Patties</h2>
+                <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 30/piece</p>
+                <a href="#">
+                <button class="btn card_btn">Buy  Here</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/s24.jpg" width="100%"></div>
+              <div class="card_content">
+                <h2 class="card_title">Sandwich</h2>
+                <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 30/piece</p>
+                <a href="#">
+                <button class="btn card_btn">Buy Here</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <div class="main">
+        
+            <ul class="cards">
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="img/s25.jpg" width="100%"></div>
+                  
+                  <div class="card_content">
+                    <h2 class="card_title">Munchorian</h2>
+                    <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 30/plate</p>
+                    <a href="#">
+                    <button class="btn card_btn">Buy Here</button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="img/s26.jpg" width="100%"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Dahi Bada</h2>
+                    <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 40/plate</p>
+                    <a href="#">
+                    <button class="btn card_btn">Buy  Here</button>
+                  </a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="img/s27.jpg" width="100%"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Roll</h2>
+                    <p class="card_text">&nbsp;&nbsp;&nbsp;  Price:Rs 40/plate</p>
+                    <a href="#">
+                    <button class="btn card_btn">Buy Here</button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="img/s28.jpg" width="100%"></div>
+                 
+                  <div class="card_content">
+                    <h2 class="card_title">Pasteries</h2>
+                    <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 70/plate</p>
+                    <a href="#">
+                    <button class="btn card_btn">Buy Here</button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="img/s29.jpg" width="100%"></div>
+                  
+                  <div class="card_content">
+                    <h2 class="card_title">Masala Dosa</h2>
+                    <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 100/plate</p>
+                    <a href="#">
+                    <button class="btn card_btn">Buy Now</button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="img/s30.jpg" width="100%"></div>
+                  
+                  <div class="card_content">
+                    <h2 class="card_title">Chaummin</h2>
+                    <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 60/plate</p>
+                    <a href="#">
+                    <button class="btn card_btn">Buy now</button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="main">
+            <h1 style="color: rgb(3, 0, 0);">Beverages</h1>
+            <ul class="cards">
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="img/s13.jpg" width="100%"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Falooda</h2>
+                    <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 50/Glass</p>
+                    <a href="#">
+                    <button class="btn card_btn">Buy Here</button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="img/s14.jpg" width="100%"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Orange Juice</h2>
+                    <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 30/Glass</p>
+                    <a href="#">
+                    <button class="btn card_btn">Buy  Here</button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="img/s15.jpg" width="100%"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Lassi</h2>
+                    <p class="card_text">&nbsp;&nbsp;&nbsp;  Price:Rs 50/Glass</p>
+                    <a href="#">
+                    <button class="btn card_btn">Buy Here</button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <div class="main">
+                
+                <ul class="cards">
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="img/s31.jpg" width="100%"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Mango Juice</h2>
+                        <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 50/Glass</p>
+                        <a href="#">
+                        <button class="btn card_btn">Buy Here</button>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="img/s32.jpg" width="100%"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Cola</h2>
+                        <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 30/Glass</p>
+                        <a href="#">
+                        <button class="btn card_btn">Buy  Here</button>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="img/s33.jpg" width="100%"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Gola</h2>
+                        <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 30</p>
+                        <a href="#">
+                        <button class="btn card_btn">Buy  Here</button>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+
+                  <div class="main">
+                    
+                    <ul class="cards">
+                      <li class="cards_item">
+                        <div class="card">
+                          <div class="card_image"><img src="img/s34.jpg" width="100%"></div>
+                          <div class="card_content">
+                            <h2 class="card_title">ButturScotch</h2>
+                            <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 50</p>
+                            <a href="#">
+                            <button class="btn card_btn">Buy Here</button>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="cards_item">
+                        <div class="card">
+                          <div class="card_image"><img src="img/s35.jpg" width="100%"></div>
+                          <div class="card_content">
+                            <h2 class="card_title">Banana Shake</h2>
+                            <p class="card_text">  &nbsp;&nbsp;&nbsp;  Price:Rs 30/Glass</p>
+                            <a href="#">
+                            <button class="btn card_btn">Buy  Here</button>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="cards_item">
+                        <div class="card">
+                          <div class="card_image"><img src="img/s36.jpg" width="100%"></div>
+                          <div class="card_content">
+                            <h2 class="card_title"> Icecream</h2>
+                            <p class="card_text"> &nbsp;&nbsp;&nbsp;  Price:Rs 50</p>
+                            <a href="#">
+                            <button class="btn card_btn">Buy Here</button>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                  
+            <!--------------------------------->
+    <!-- Start Footer -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
